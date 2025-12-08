@@ -1,0 +1,101 @@
+/* ===== NAVIGATION BAR ===== */
+/* The top bar that always stays visible */
+/* keep your original nav styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1002;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 30, 60, 0.55),
+    rgba(0, 20, 40, 0.45)
+  );
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(92, 228, 255, 0.15);
+}
+
+/* desktop nav slides normally */
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+/* hamburger hidden on desktop */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(0, 20, 40, 0.95);
+    flex-direction: column;
+    width: 220px;
+    padding: 20px;
+    gap: 20px;
+
+    /* animation setup */
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+nav:hover {
+  box-shadow: 0 6px 24px rgba(92, 228, 255, 0.1);
+}
+
+
+.burger {
+  display: inline-block;
+  cursor: pointer;
+  z-index: 1000;
+
+}
+
+.burger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background:rgb(92, 228, 255);
+  margin: 6px 0;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    opacity 0.3s ease;
+}
+
+#burger-checkbox {
+  display: none;
+}
+
+#burger-checkbox:checked + .burger span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+#burger-checkbox:checked + .burger span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+#burger-checkbox:checked + .burger span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}

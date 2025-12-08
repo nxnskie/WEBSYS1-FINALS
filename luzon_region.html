@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Luzon - PhilTours</title>
   <link rel="stylesheet" href="philtours_regions.css">
+   <link rel="stylesheet" href="nav.css" />
   <link rel="icon" type="image/jpg" href="images/TRAVEL.png">
 </head>
 <body class="luzon-page">
@@ -18,25 +19,29 @@
   </svg>
 
   <!-- Navigation Bar -->
-  <nav>
-    <div class="logo">
-      <img src="images/TRAVEL.png" alt="PhilTours Logo" class="logo-image">
-      <span>PhilTours</span>
-    </div>
-    <div class="nav-divider"></div>
-    <a href="index.html">HOME</a>
-
-    <div class="dropdown">
-      <a href="philtours_booknow.html">BOOK NOW ▼</a>
-      <div class="dropdown-content">
-        <a href="luzon_region.html">Luzon</a>
-        <a href="visayas_region.html">Visayas</a>
-        <a href="mindanao_region.html">Mindanao</a>
+   <nav>
+      <div class="logo">
+        <img src="images/TRAVEL.png" alt="PhilTours Logo" class="logo-image" />
+        <span>PhilTours</span>
       </div>
-    </div>
 
-    <a href="contact_us.html">CONTACT US</a>
-  </nav>
+      <div class="hamburger">
+        <input id="burger-checkbox" type="checkbox" />
+        <label class="burger" for="burger-checkbox">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">HOME</a>
+
+        <a href="philtours_booknow.html">BOOK NOW </a>
+
+        <a href="contact_us.html">CONTACT US</a>
+      </div>
+    </nav>
 
   <!-- Hero -->
   <section class="page-hero luzon-hero">
@@ -108,6 +113,7 @@
     </div>
     <div class="footer-bottom"><p>&copy; 2025 Philippine Tours. All rights reserved.</p></div>
   </footer>
+    <script src="script.js"></script>
 </body>
 </html>
 

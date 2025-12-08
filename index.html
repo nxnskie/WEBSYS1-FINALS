@@ -1,71 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- Character encoding and viewport settings -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Page title shown in browser tab -->
     <title>PhilTours - Experience Paradise</title>
-    
+
     <!-- Link to main CSS stylesheet -->
-    <link rel="stylesheet" href="philtours_main.css">
-    
+    <link rel="stylesheet" href="philtours_main.css" />
+    <link rel="stylesheet" href="nav.css" />
+
     <!-- Browser tab icon -->
-    <link rel="icon" type="imagee/jpg" href="images\TRAVEL.png">
-</head>
-<body>
+    <link rel="icon" type="imagee/jpg" href="images\TRAVEL.png" />
+  </head>
+  <body>
     <!-- ===== SVG ICON LIBRARY ===== -->
     <!-- These are reusable icons embedded as SVG symbols -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
       <!-- Chevron/arrow icon -->
       <symbol id="icon-chevron" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M9.29 6.71L13.59 11l-4.3 4.29L10.71 17l5-5-5-5z"/>
+        <path
+          fill="currentColor"
+          d="M9.29 6.71L13.59 11l-4.3 4.29L10.71 17l5-5-5-5z"
+        />
       </symbol>
     </svg>
 
     <!-- ===== Navigation Bar ===== -->
     <nav>
       <div class="logo">
-        <img src="images\TRAVEL.png" alt="PhilTours Logo" class="logo-image">
+        <img src="images/TRAVEL.png" alt="PhilTours Logo" class="logo-image" />
         <span>PhilTours</span>
       </div>
-      <div class="nav-divider"></div>
-      <a href="index.html">HOME</a>
 
-      <!-- Dropdown Menu -->
-      <div class="dropdown">
-        <a href="philtours_booknow.html">BOOK NOW ▼</a>
-        <div class="dropdown-content">
-          <a href="luzon_region.html">Luzon</a>
-          <a href="visayas_region.html">Visayas</a>
-          <a href="mindanao_region.html">Mindanao</a>
-        </div>
+      <div class="hamburger">
+        <input id="burger-checkbox" type="checkbox" />
+        <label class="burger" for="burger-checkbox">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
       </div>
 
-      <a href="contact_us.html">CONTACT US</a>
-    </nav>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">HOME</a>
 
+        <a href="philtours_booknow.html">BOOK NOW </a>
+
+        <a href="contact_us.html">CONTACT US</a>
+      </div>
+    </nav>
 
     <section class="start-section">
       <h1>Welcome to PhilTours</h1>
-  </section>
+    </section>
     <!-- ===== Welcome Section ===== -->
     <!-- Hero content with tour overview and booking button -->
     <div class="welcome-section">
-    <h1>Philippines Tour Package</h1>
-    <p>Mabuhay, traveler!
-We’re excited to welcome you to the Philippines, a tropical paradise where every island has a story, every smile feels like home, and every sunset paints the sky with magic. Whether you’re here for our crystal-clear beaches, majestic mountains, vibrant festivals, or rich cultural heritage, you’ll find something unforgettable at every turn.
-
-From the world-famous shores of Boracay, to the breathtaking landscapes of Palawan and Bohol, to the warm hospitality of Filipino communities across the archipelago—your journey here is more than a vacation. It’s an experience filled with adventure, culture, food, and memories you’ll treasure for a lifetime.
-
-So pack your bags, embrace the beauty, and let the Philippines show you why it’s truly More Fun in the Philippines.
-Welcome, and enjoy your stay!</p>
-    <ul>
-        <p>Duration: 10 days <br>
-        Price: $2,500 per person <br>
-        Includes accommodation, meals, and guided tours</p>
-    </ul>
+      <h1>Philippines Tour Package</h1>
+      <p>
+        Mabuhay, traveler! We’re excited to welcome you to the Philippines, a
+        tropical paradise where every island has a story, every smile feels like
+        home, and every sunset paints the sky with magic. Whether you’re here
+        for our crystal-clear beaches, majestic mountains, vibrant festivals, or
+        rich cultural heritage, you’ll find something unforgettable at every
+        turn. From the world-famous shores of Boracay, to the breathtaking
+        landscapes of Palawan and Bohol, to the warm hospitality of Filipino
+        communities across the archipelago—your journey here is more than a
+        vacation. It’s an experience filled with adventure, culture, food, and
+        memories you’ll treasure for a lifetime. So pack your bags, embrace the
+        beauty, and let the Philippines show you why it’s truly More Fun in the
+        Philippines. Welcome, and enjoy your stay!
+      </p>
+      <ul>
+        <p>
+          Duration: 10 days <br />
+          Price: $2,500 per person <br />
+          Includes accommodation, meals, and guided tours
+        </p>
+      </ul>
       <div class="booking">
         <a href="philtours_booknow.html"><button>Book Now</button></a>
       </div>
@@ -77,27 +92,55 @@ Welcome, and enjoy your stay!</p>
       <h2>Featured Destinations</h2>
       <div class="destinations-grid">
         <div class="destination-card">
-          <div class="card-image"> <img src="https://i.pinimg.com/1200x/b6/ad/8b/b6ad8b1ebdbe9cb948d3204790f31d71.jpg" alt="Image of El Nido in Palawan" class="sample-image"> </div>
+          <div class="card-image">
+            <img
+              src="https://i.pinimg.com/1200x/b6/ad/8b/b6ad8b1ebdbe9cb948d3204790f31d71.jpg"
+              alt="Image of El Nido in Palawan"
+              class="sample-image"
+            />
+          </div>
           <h3>El Nido, Palawan</h3>
-          <p>El Nido is one of the most breathtaking destinations in the Philippines, known for its towering limestone cliffs, emerald lagoons, and crystal-clear waters.
-             It offers world-class island hopping where you can explore hidden beaches, caves, and coral reefs.
-             The scenery feels like a paradise straight out of a movie.</p>
+          <p>
+            El Nido is one of the most breathtaking destinations in the
+            Philippines, known for its towering limestone cliffs, emerald
+            lagoons, and crystal-clear waters. It offers world-class island
+            hopping where you can explore hidden beaches, caves, and coral
+            reefs. The scenery feels like a paradise straight out of a movie.
+          </p>
           <span class="rating">★★★★★ 4.9/5</span>
         </div>
         <div class="destination-card">
-          <div class="card-image"> <img src="https://i.pinimg.com/1200x/c0/de/3f/c0de3f0530f37ff696c09312e162e430.jpg" alt="Image of the Chocolate Hills in Bohol" class="sample-image"> </div>
+          <div class="card-image">
+            <img
+              src="https://i.pinimg.com/1200x/c0/de/3f/c0de3f0530f37ff696c09312e162e430.jpg"
+              alt="Image of the Chocolate Hills in Bohol"
+              class="sample-image"
+            />
+          </div>
           <h3>Chocolate Hills, Bohol</h3>
-          <p>The Chocolate Hills are a unique natural formation consisting of over a thousand dome-shaped hills.
-             They turn brown during the dry season, resembling giant chocolate kisses.
-             This incredible landscape is one-of-a-kind and has become Bohol’s most iconic attraction.</p>
+          <p>
+            The Chocolate Hills are a unique natural formation consisting of
+            over a thousand dome-shaped hills. They turn brown during the dry
+            season, resembling giant chocolate kisses. This incredible landscape
+            is one-of-a-kind and has become Bohol’s most iconic attraction.
+          </p>
           <span class="rating">★★★★★ 4.8/5</span>
         </div>
         <div class="destination-card">
-          <div class="card-image"> <img src="https://i.pinimg.com/1200x/33/51/93/3351938a22692f13bed9e9ca3e4e1179.jpg" alt="Image of Samal Island in Davao" class="sample-image"> </div>
+          <div class="card-image">
+            <img
+              src="https://i.pinimg.com/1200x/33/51/93/3351938a22692f13bed9e9ca3e4e1179.jpg"
+              alt="Image of Samal Island in Davao"
+              class="sample-image"
+            />
+          </div>
           <h3>Samal Island</h3>
-          <p>Samal Island is known for its clean beaches, clear waters, and serene environment.
-             Popular activities include snorkeling, diving, and visiting beautiful resorts like Pearl Farm.
-              It’s an easy escape from Davao City and a top spot for relaxing island life..</p>
+          <p>
+            Samal Island is known for its clean beaches, clear waters, and
+            serene environment. Popular activities include snorkeling, diving,
+            and visiting beautiful resorts like Pearl Farm. It’s an easy escape
+            from Davao City and a top spot for relaxing island life..
+          </p>
           <span class="rating">★★★★☆ 4.7/5</span>
         </div>
       </div>
@@ -109,32 +152,67 @@ Welcome, and enjoy your stay!</p>
       <h2>What's Included in Your Package</h2>
       <div class="inclusions-grid">
         <div class="inclusion-item">
-          <div class="inclusion-icon"><img src="https://i.pinimg.com/1200x/e5/71/05/e571054bfc9c592dfac606f7336d6800.jpg" alt="Philippine Hotels" class="inclusion-image"></div>
+          <div class="inclusion-icon">
+            <img
+              src="https://i.pinimg.com/1200x/e5/71/05/e571054bfc9c592dfac606f7336d6800.jpg"
+              alt="Philippine Hotels"
+              class="inclusion-image"
+            />
+          </div>
           <h4>4-Star Accommodations</h4>
           <p>Luxury beachfront resorts and premium hotels</p>
         </div>
         <div class="inclusion-item">
-          <div class="inclusion-icon"><img src="https://i.pinimg.com/736x/ab/8e/b5/ab8eb5ff670ae0c403201a8763040a91.jpg" alt="Filipino Food" class="inclusion-image"></div>
+          <div class="inclusion-icon">
+            <img
+              src="https://i.pinimg.com/736x/ab/8e/b5/ab8eb5ff670ae0c403201a8763040a91.jpg"
+              alt="Filipino Food"
+              class="inclusion-image"
+            />
+          </div>
           <h4>All Meals Provided</h4>
           <p>Authentic Filipino cuisine plus international options</p>
         </div>
         <div class="inclusion-item">
-          <div class="inclusion-icon"><img src="https://i.pinimg.com/1200x/13/3b/d1/133bd14d7fd1ea7e498d01f683df4596.jpg" alt="Philippines' Tourist Transportaion" class="inclusion-image"></div>
+          <div class="inclusion-icon">
+            <img
+              src="https://i.pinimg.com/1200x/13/3b/d1/133bd14d7fd1ea7e498d01f683df4596.jpg"
+              alt="Philippines' Tourist Transportaion"
+              class="inclusion-image"
+            />
+          </div>
           <h4>Ground Transportation</h4>
           <p>Private vehicles and ferry transfers included</p>
         </div>
         <div class="inclusion-item">
-          <div class="inclusion-icon"> <img src="https://i.pinimg.com/736x/2e/f4/52/2ef452518a1087cb1f00c027b75639ba.jpg" alt="Philippine Tourist Guide" class="inclusion-image"></div>
+          <div class="inclusion-icon">
+            <img
+              src="https://i.pinimg.com/736x/2e/f4/52/2ef452518a1087cb1f00c027b75639ba.jpg"
+              alt="Philippine Tourist Guide"
+              class="inclusion-image"
+            />
+          </div>
           <h4>Expert Tour Guides</h4>
           <p>Local guides with deep knowledge and passion</p>
         </div>
         <div class="inclusion-item">
-          <div class="inclusion-icon"><img src="https://i.pinimg.com/736x/87/d8/a3/87d8a333d43031ae20cc77123bc6ea18.jpg" alt="Image of Islands in the Philippines" class="inclusion-image"></div>
+          <div class="inclusion-icon">
+            <img
+              src="https://i.pinimg.com/736x/87/d8/a3/87d8a333d43031ae20cc77123bc6ea18.jpg"
+              alt="Image of Islands in the Philippines"
+              class="inclusion-image"
+            />
+          </div>
           <h4>Activities & Tours</h4>
           <p>Island hopping, snorkeling, hiking, and cultural tours</p>
         </div>
         <div class="inclusion-item">
-          <div class="inclusion-icon"><img src="https://i.pinimg.com/736x/ed/98/4e/ed984e38c1457e4d186c48bbef4cc4bf.jpg" alt="Travel Insurance"></div>
+          <div class="inclusion-icon">
+            <img
+              src="https://i.pinimg.com/736x/ed/98/4e/ed984e38c1457e4d186c48bbef4cc4bf.jpg"
+              alt="Travel Insurance"
+            />
+          </div>
           <h4>Travel Insurance</h4>
           <p>Comprehensive coverage for peace of mind</p>
         </div>
@@ -147,17 +225,28 @@ Welcome, and enjoy your stay!</p>
       <h2>What Our Travelers Say</h2>
       <div class="testimonials-grid">
         <div class="testimonial-card">
-          <p>"An absolutely unforgettable experience! The guides were knowledgeable, the beaches were stunning, and every moment felt magical."</p>
+          <p>
+            "An absolutely unforgettable experience! The guides were
+            knowledgeable, the beaches were stunning, and every moment felt
+            magical."
+          </p>
           <strong>- Sarah Johnson</strong>
           <span class="testimonial-rating">★★★★★</span>
         </div>
         <div class="testimonial-card">
-          <p>"The attention to detail was incredible. From meals to accommodations, everything was perfectly arranged. Highly recommended!"</p>
+          <p>
+            "The attention to detail was incredible. From meals to
+            accommodations, everything was perfectly arranged. Highly
+            recommended!"
+          </p>
           <strong>- Michael Chen</strong>
           <span class="testimonial-rating">★★★★★</span>
         </div>
         <div class="testimonial-card">
-          <p>"Worth every penny. The Philippines is truly paradise, and Philippine Tours made sure we experienced the very best."</p>
+          <p>
+            "Worth every penny. The Philippines is truly paradise, and
+            Philippine Tours made sure we experienced the very best."
+          </p>
           <strong>- Emma Williams</strong>
           <span class="testimonial-rating">★★★★★</span>
         </div>
@@ -168,8 +257,13 @@ Welcome, and enjoy your stay!</p>
     <!-- Primary CTA to encourage bookings -->
     <section class="cta-section">
       <h2>Ready to Experience Paradise?</h2>
-      <p>Join hundreds of satisfied travelers who've discovered the magic of the Philippines with us.</p>
-      <a href="contact_us.html"><button class="cta-button">Start Your Journey Today</button> </a> 
+      <p>
+        Join hundreds of satisfied travelers who've discovered the magic of the
+        Philippines with us.
+      </p>
+      <a href="contact_us.html"
+        ><button class="cta-button">Start Your Journey Today</button>
+      </a>
     </section>
 
     <!-- ===== Footer ===== -->
@@ -179,7 +273,10 @@ Welcome, and enjoy your stay!</p>
         <!-- About Section -->
         <div class="footer-section">
           <h4>About Us</h4>
-          <p>PhilTours brings you authentic experiences across the islands of the Philippines.</p>
+          <p>
+            PhilTours brings you authentic experiences across the islands of the
+            Philippines.
+          </p>
         </div>
 
         <!-- Quick Links -->
@@ -195,12 +292,34 @@ Welcome, and enjoy your stay!</p>
         <!-- Contact Info & Social -->
         <div class="footer-section footer-contact">
           <h4>Contact Info</h4>
-          <p class="contact-line">Email: <a href="mailto:info@philtours.com">info@philtours.com</a></p>
-          <p class="contact-line">Phone: <a href="tel:+631234567890">+63 1234 567890</a></p>
+          <p class="contact-line">
+            Email: <a href="mailto:info@philtours.com">info@philtours.com</a>
+          </p>
+          <p class="contact-line">
+            Phone: <a href="tel:+631234567890">+63 1234 567890</a>
+          </p>
           <div class="socials">
-            <a href="https://www.facebook.com/hnregis" title="Hart Niño Regis" target="_blank" class="social">HNR</a>
-            <a href="https://www.facebook.com/pablojabb69" title="Anthony Jumaya" target="_blank" class="social">AJ</a>
-            <a href="https://www.facebook.com/mark.lourenz.hidalgo.906873" title="Mark Lourenz Hidalgo" target="_blank" class="social">MLH</a>
+            <a
+              href="https://www.facebook.com/hnregis"
+              title="Hart Niño Regis"
+              target="_blank"
+              class="social"
+              >HNR</a
+            >
+            <a
+              href="https://www.facebook.com/pablojabb69"
+              title="Anthony Jumaya"
+              target="_blank"
+              class="social"
+              >AJ</a
+            >
+            <a
+              href="https://www.facebook.com/mark.lourenz.hidalgo.906873"
+              title="Mark Lourenz Hidalgo"
+              target="_blank"
+              class="social"
+              >MLH</a
+            >
           </div>
         </div>
       </div>
@@ -210,5 +329,6 @@ Welcome, and enjoy your stay!</p>
         <p>&copy; 2025 Philippine Tours. All rights reserved.</p>
       </div>
     </footer>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
