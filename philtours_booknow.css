@@ -1,10 +1,8 @@
 
-/* ============================================
-   PHILTOURS BOOK NOW STYLESHEET
-   
+/*
    This covers the booking/destination page.
    Shows 3 region cards to choose from.
-   ============================================ */
+    */
 
 /* ===== BOOK NOW HERO SECTION ===== */
 /* Main heading and intro text on booking page */
@@ -238,3 +236,4 @@
     font-size: 13px;
   }
 }
+
