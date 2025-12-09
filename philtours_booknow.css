@@ -27,6 +27,7 @@
   /* Subtitle/description */
   font-size: 16px;
   color: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 135, 147, 0.567);
   line-height: 1.8;
   max-width: 800px;
   margin: 0 auto;
