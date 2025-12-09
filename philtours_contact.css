@@ -270,7 +270,6 @@ body.contact-page::before {
 }
 
 .form-group textarea {
-  resize: vertical;
   font-family: 'Poppins', sans-serif;
 }
 
