@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Profile - PhilTours</title>
+  <link rel="stylesheet" href="philtours_main.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="profile.css">
+  <link rel="icon" type="image/jpg" href="images/TRAVEL.png">
+</head>
+<body>
+  <!-- ===== SVG ICON LIBRARY ===== -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+    <!-- Chevron/arrow icon -->
+    <symbol id="icon-chevron" viewBox="0 0 24 24">
+      <path
+        fill="currentColor"
+        d="M9.29 6.71L13.59 11l-4.3 4.29L10.71 17l5-5-5-5z"
+      />
+    </symbol>
+  </svg>
+
+  <!-- ===== NAVIGATION BAR ===== -->
+  <nav>
+    <div class="logo">
+      <img src="images/TRAVEL.png" alt="PhilTours Logo" class="logo-image">
+      <span>PhilTours</span>
+    </div>
+    <div class="nav-divider"></div>
+
+    <div class="hamburger">
+      <input id="burger-checkbox" type="checkbox" />
+      <label class="burger" for="burger-checkbox">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">HOME</a>
+      <a href="philtours_booknow.html">BOOK NOW</a>
+      <a href="contact_us.html">CONTACT US</a>
+    </div>
+  </nav>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+    <h1>My Profile</h1>
+    <p>Manage your PhilTours account and personal information.</p>
+  </main>
+
+  <!-- ===== CONTENT SECTIONS ===== -->
+  <div style="background: linear-gradient(135deg, #ddf3ff 0%, #e6f2ff 50%, #f0f8ff 100%); position: relative; z-index: 2; padding-top: 0;">
+    <div style="max-width: 900px; margin: 0 auto; padding: 80px 24px 40px;">
+    <!-- Account Information Section -->
+    <section>
+      <h2>Account Information</h2>
+      <div class="profile-info">
+        <div class="info-item">
+          <label>Username</label>
+          <span id="profileUsername">(not signed in)</span>
+        </div>
+        <div class="info-item">
+          <label>Member Since</label>
+          <span id="memberDate">Today</span>
+        </div>
+        <div class="info-item">
+          <label>Account Status</label>
+          <span style="color: rgb(76, 175, 80); font-weight: 700;">Active</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Actions Section -->
+    <section>
+      <h2>Quick Actions</h2>
+      <p>Update your account preferences and security settings.</p>
+      <div style="margin-top: 20px;">
+        <a href="settings.html" style="display: inline-block; padding: 12px 24px; background: linear-gradient(135deg, rgb(92, 228, 255), #00d4ff); color: white; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(92, 228, 255, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(92, 228, 255, 0.3)'">
+          Go to Settings
+        </a>
+      </div>
+    </section>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>&copy; 2025 PhilTours. All rights reserved.</footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const username = localStorage.getItem('currentUser') || '(not signed in)';
+      document.getElementById('profileUsername').textContent = username;
+      
+      const signupDate = localStorage.getItem('signupDate');
+      if (signupDate) {
+        const date = new Date(signupDate);
+        document.getElementById('memberDate').textContent = date.toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+      }
+    });
+  </script>
+</body>
+</html>

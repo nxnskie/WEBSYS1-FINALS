@@ -14,6 +14,21 @@
 
     <!-- Browser tab icon -->
     <link rel="icon" type="imagee/jpg" href="images\TRAVEL.png" />
+
+    <!-- Redirect to login if not authenticated -->
+    <script>
+      (function() {
+        try {
+          var isAdmin = localStorage.getItem('isAdmin');
+          // If not on login page and not authenticated, redirect to login.html
+          if (!isAdmin && !/login\.html$/i.test(location.pathname)) {
+            location.replace('login.html');
+          }
+        } catch (e) {
+          console.warn('Auth check failed', e);
+        }
+      })();
+    </script>
   </head>
   <body>
     <!-- ===== SVG ICON LIBRARY ===== -->
@@ -331,5 +346,22 @@
       </div>
     </footer>
     <script src="script.js"></script>
+    <script>
+      // Show logout button when admin is authenticated and wire logout action
+      document.addEventListener('DOMContentLoaded', function() {
+        var logoutBtn = document.getElementById('logoutBtn');
+        if (!logoutBtn) return;
+        try {
+          if (localStorage.getItem('isAdmin')) {
+            logoutBtn.style.display = 'inline-block';
+          }
+        } catch (e) {}
+
+        logoutBtn.addEventListener('click', function() {
+          try { localStorage.removeItem('isAdmin'); } catch (e) {}
+          location.replace('login.html');
+        });
+      });
+    </script>
   </body>
 </html>

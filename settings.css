@@ -1,0 +1,296 @@
+/* ===== SETTINGS PAGE STYLESHEET ===== */
+
+/* ===== BODY & LAYOUT ===== */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ddf3ff 0%, #e6f2ff 50%, #f0f8ff 100%);
+  font-family: 'Poppins', sans-serif;
+  padding-top: 70px;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 70px;
+  width: 100%;
+  height: 50vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.492), rgba(0, 0, 0, 0.492)),
+    url("https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop");
+  background-attachment: scroll;
+  pointer-events: none;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+  padding: 60px 24px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+main > h1 {
+  font-size: 48px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+main > p {
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== SETTINGS SECTIONS ===== */
+section {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(92, 228, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+section:hover {
+  box-shadow: 0 6px 20px rgba(92, 228, 255, 0.12);
+  border-color: rgba(92, 228, 255, 0.2);
+}
+
+section h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 24px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+section h2::before {
+  content: '';
+  width: 4px;
+  height: 24px;
+  background: linear-gradient(180deg, rgb(92, 228, 255), #00d4ff);
+  border-radius: 2px;
+}
+
+section p {
+  margin: 0 0 20px 0;
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ===== FORM CONTROLS ===== */
+.settings-group {
+  margin-bottom: 24px;
+}
+
+.settings-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: linear-gradient(135deg, rgba(92, 228, 255, 0.03), rgba(0, 212, 255, 0.03));
+  border-radius: 12px;
+  border: 1px solid rgba(92, 228, 255, 0.1);
+  transition: all 0.3s ease;
+  margin-bottom: 12px;
+}
+
+.settings-item:hover {
+  background: linear-gradient(135deg, rgba(92, 228, 255, 0.08), rgba(0, 212, 255, 0.08));
+  border-color: rgba(92, 228, 255, 0.2);
+}
+
+.settings-item label {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a2e;
+  cursor: pointer;
+  flex: 1;
+}
+
+.settings-item input[type="checkbox"],
+.settings-item input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: rgb(92, 228, 255);
+}
+
+.settings-item input[type="text"],
+.settings-item input[type="email"],
+.settings-item input[type="password"],
+.settings-item select {
+  padding: 10px 12px;
+  border: 1px solid rgba(92, 228, 255, 0.3);
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #1a1a2e;
+  transition: all 0.3s ease;
+  background: #ffffff;
+}
+
+.settings-item input[type="text"]:focus,
+.settings-item input[type="email"]:focus,
+.settings-item input[type="password"]:focus,
+.settings-item select:focus {
+  outline: none;
+  border-color: rgb(92, 228, 255);
+  box-shadow: 0 0 0 3px rgba(92, 228, 255, 0.1);
+}
+
+/* ===== BUTTONS ===== */
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  justify-content: flex-start;
+}
+
+button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, rgb(92, 228, 255), #00d4ff);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(92, 228, 255, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(92, 228, 255, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: rgba(92, 228, 255, 0.1);
+  color: rgb(92, 228, 255);
+  border: 2px solid rgba(92, 228, 255, 0.3);
+}
+
+.btn-secondary:hover {
+  background: rgba(92, 228, 255, 0.15);
+  border-color: rgb(92, 228, 255);
+}
+
+.btn-danger {
+  background: rgba(211, 47, 47, 0.1);
+  color: #d32f2f;
+  border: 2px solid rgba(211, 47, 47, 0.3);
+}
+
+.btn-danger:hover {
+  background: rgba(211, 47, 47, 0.15);
+  border-color: #d32f2f;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 40px 12px 24px;
+  color: #888;
+  font-size: 14px;
+  border-top: 1px solid rgba(92, 228, 255, 0.1);
+  margin-top: 60px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  main {
+    padding: 50px 16px 30px;
+  }
+
+  main > h1 {
+    font-size: 36px;
+  }
+
+  section {
+    padding: 24px;
+  }
+
+  section h2 {
+    font-size: 20px;
+  }
+
+  .settings-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .settings-item input[type="text"],
+  .settings-item input[type="email"],
+  .settings-item input[type="password"],
+  .settings-item select {
+    width: 100%;
+  }
+
+  .button-group {
+    flex-wrap: wrap;
+  }
+
+  button {
+    flex: 1;
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 40px 12px 24px;
+  }
+
+  main > h1 {
+    font-size: 28px;
+  }
+
+  section {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  section h2 {
+    font-size: 18px;
+  }
+
+  section p {
+    font-size: 14px;
+  }
+
+  .settings-item {
+    padding: 12px;
+  }
+
+  button {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
