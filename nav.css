@@ -259,6 +259,13 @@ nav:hover {
     justify-content: flex-start;
   }
 
+   nav > :nth-child(3) {
+    order: 5;
+  }
+  nav > :nth-child(5) {
+    order: 3;
+  }
+
   .nav-user {
     position: static;
     margin-left: auto;

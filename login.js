@@ -30,6 +30,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const u = (document.getElementById('username').value || '').trim();
     const p = (document.getElementById('password').value || '');
 
+
+    
     // Check against hardcoded admin or registered users
     let isValid = false;
     
