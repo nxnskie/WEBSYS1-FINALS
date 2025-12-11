@@ -243,3 +243,18 @@ function handleContactSubmit(event) {
     if (e.key === 'isAdmin' || e.key === 'currentUser') updateLogoutVisibility();
   });
 })();
+
+  document.addEventListener('DOMContentLoaded', function() {
+        var logoutBtn = document.getElementById('logoutBtn');
+        if (!logoutBtn) return;
+        try {
+          if (localStorage.getItem('isAdmin')) {
+            logoutBtn.style.display = 'inline-block';
+          }
+        } catch (e) {}
+
+        logoutBtn.addEventListener('click', function() {
+          try { localStorage.removeItem('isAdmin'); } catch (e) {}
+          location.replace('login.html');
+        });
+      });
