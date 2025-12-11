@@ -10,7 +10,7 @@
     
     <!-- Link to main CSS stylesheet -->
     <link rel="stylesheet" href="philtours_main.css">
-    
+     <link rel="stylesheet" href="nav.css" />
     <!-- Link to book now page specific styles -->
     <link rel="stylesheet" href="philtours_booknow.css">
     
@@ -28,25 +28,31 @@
     </svg>
 
     <!-- ===== NAVIGATION BAR ===== -->
-    <nav>
-      <div class="logo">
-        <img src="images\TRAVEL.png" alt="PhilTours Logo" class="logo-image">
-        <span>PhilTours</span>
-      </div>
-      <div class="nav-divider"></div>
-      <a href="index.html">HOME</a>
+        <nav>
+    <div class="logo">
+      <img src="images/TRAVEL.png" alt="PhilTours Logo" class="logo-image">
+      <span>PhilTours</span>
+    </div>
+    <div class="nav-divider"></div>
 
-      <!-- Dropdown Menu -->
-      <div class="dropdown">
-        <a href="philtours_booknow.html">BOOK NOW ▼</a>
-        <div class="dropdown-content">
-          <a href="luzon_region.html">Luzon</a>
-          <a href="visayas_region.html">Visayas</a>
-          <a href="mindanao_region.html">Mindanao</a>
-        </div>
+      <div class="hamburger">
+        <input id="burger-checkbox" type="checkbox" />
+        <label class="burger" for="burger-checkbox">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
       </div>
 
-      <a href="contact_us.html">CONTACT US</a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">HOME</a>
+
+        <a href="philtours_booknow.html">BOOK NOW </a>
+
+        <a href="contact_us.html">CONTACT US</a>
+
+        
+      </div>
     </nav>
 
     <!-- ===== Book Now Hero Section ===== -->
@@ -141,7 +147,7 @@
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="philtours_booknow.html">Book Now</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="contact_us.html">Contact</a></li>
           </ul>
         </div>
 
@@ -163,5 +169,8 @@
         <p>&copy; 2025 Philippine Tours. All rights reserved.</p>
       </div>
     </footer>
+      <script src="script.js"></script>
 </body>
+
 </html>
+

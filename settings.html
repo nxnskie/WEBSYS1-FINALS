@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Settings - PhilTours</title>
+  <link rel="stylesheet" href="philtours_main.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="settings.css">
+  <link rel="icon" type="image/jpg" href="images/TRAVEL.png">
+</head>
+<body>
+  <!-- ===== SVG ICON LIBRARY ===== -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+    <!-- Chevron/arrow icon -->
+    <symbol id="icon-chevron" viewBox="0 0 24 24">
+      <path
+        fill="currentColor"
+        d="M9.29 6.71L13.59 11l-4.3 4.29L10.71 17l5-5-5-5z"
+      />
+    </symbol>
+  </svg>
+
+  <!-- ===== NAVIGATION BAR ===== -->
+  <nav>
+    <div class="logo">
+      <img src="images/TRAVEL.png" alt="PhilTours Logo" class="logo-image">
+      <span>PhilTours</span>
+    </div>
+    <div class="nav-divider"></div>
+
+    <div class="hamburger">
+      <input id="burger-checkbox" type="checkbox" />
+      <label class="burger" for="burger-checkbox">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">HOME</a>
+      <a href="philtours_booknow.html">BOOK NOW</a>
+      <a href="contact_us.html">CONTACT US</a>
+    </div>
+  </nav>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+    <h1>Settings</h1>
+    <p>Customize your PhilTours experience and manage your preferences.</p>
+  </main>
+
+  <!-- ===== CONTENT SECTIONS ===== -->
+  <div style="background: linear-gradient(135deg, #ddf3ff 0%, #e6f2ff 50%, #f0f8ff 100%); position: relative; z-index: 2; padding-top: 0;">
+    <div style="max-width: 900px; margin: 0 auto; padding: 80px 24px 40px;">
+    <!-- Notification Settings Section -->
+    <section>
+      <h2>Notifications</h2>
+      <p>Choose how you want to receive updates about your bookings and special offers.</p>
+      <div class="settings-group">
+        <div class="settings-item">
+          <label for="emailNotif">Email Notifications</label>
+          <input type="checkbox" id="emailNotif" checked>
+        </div>
+        <div class="settings-item">
+          <label for="promNotif">Promotional Offers</label>
+          <input type="checkbox" id="promNotif" checked>
+        </div>
+        <div class="settings-item">
+          <label for="bookingUpdates">Booking Updates</label>
+          <input type="checkbox" id="bookingUpdates" checked>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy Settings Section -->
+    <section>
+      <h2>Privacy & Security</h2>
+      <p>Control your privacy settings and manage your account security.</p>
+      <div class="settings-group">
+        <div class="settings-item">
+          <label for="profileVisibility">Profile Visibility</label>
+          <select id="profileVisibility">
+            <option value="private">Private</option>
+            <option value="friends" selected>Friends Only</option>
+            <option value="public">Public</option>
+          </select>
+        </div>
+        <div class="settings-item">
+          <label for="twoFactor">Two-Factor Authentication</label>
+          <input type="checkbox" id="twoFactor">
+        </div>
+      </div>
+    </section>
+
+    <!-- Preferences Section -->
+    <section>
+      <h2>Preferences</h2>
+      <p>Adjust your display and communication preferences.</p>
+      <div class="settings-group">
+        <div class="settings-item">
+          <label for="language">Language</label>
+          <select id="language">
+            <option value="english" selected>English</option>
+            <option value="spanish">Spanish</option>
+            <option value="french">French</option>
+            <option value="tagalog">Tagalog</option>
+          </select>
+        </div>
+        <div class="settings-item">
+          <label for="currency">Currency</label>
+          <select id="currency">
+            <option value="usd" selected>USD ($)</option>
+            <option value="php">PHP (₱)</option>
+            <option value="eur">EUR (€)</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Account Management Section -->
+    <section>
+      <h2>Account Management</h2>
+      <p>Manage your account settings and password.</p>
+      <div class="button-group">
+        <button class="btn-secondary">Change Password</button>
+        <button class="btn-danger">Delete Account</button>
+      </div>
+    </section>
+
+    <!-- Save Settings Section -->
+    <section style="background: linear-gradient(135deg, rgba(76, 175, 80, 0.05), rgba(56, 142, 60, 0.05)); border-color: rgba(76, 175, 80, 0.2);">
+      <div style="text-align: center;">
+        <button class="btn-primary" onclick="saveSettings()" style="padding: 14px 40px; font-size: 16;">
+          Save All Settings
+        </button>
+        <p style="margin-top: 12px; color: #888; font-size: 13px;">Changes are automatically saved</p>
+      </div>
+    </section>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>&copy; 2025 PhilTours. All rights reserved.</footer>
+
+  <script src="script.js"></script>
+  <script>
+    function saveSettings() {
+      const settings = {
+        emailNotif: document.getElementById('emailNotif').checked,
+        promNotif: document.getElementById('promNotif').checked,
+        bookingUpdates: document.getElementById('bookingUpdates').checked,
+        profileVisibility: document.getElementById('profileVisibility').value,
+        twoFactor: document.getElementById('twoFactor').checked,
+        language: document.getElementById('language').value,
+        currency: document.getElementById('currency').value
+      };
+      
+      localStorage.setItem('userSettings', JSON.stringify(settings));
+      alert('Settings saved successfully!');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedSettings = localStorage.getItem('userSettings');
+      if (savedSettings) {
+        const settings = JSON.parse(savedSettings);
+        document.getElementById('emailNotif').checked = settings.emailNotif;
+        document.getElementById('promNotif').checked = settings.promNotif;
+        document.getElementById('bookingUpdates').checked = settings.bookingUpdates;
+        document.getElementById('profileVisibility').value = settings.profileVisibility;
+        document.getElementById('twoFactor').checked = settings.twoFactor;
+        document.getElementById('language').value = settings.language;
+        document.getElementById('currency').value = settings.currency;
+      }
+    });
+  </script>
+</body>
+</html>
